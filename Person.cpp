@@ -47,15 +47,3 @@ int Person::printAge(){
 	cout << "Age = " << this->age << endl;
 }
 
-
-
-
-int main(int argc, char const *argv[]) {
-	/* code */
-	Person user("Billy Bloggs", 10, true, 110);
-
-	cout << user.getName() << endl;
-
-	while(user.ageUp() == 0){	}
-	return 0;
-}
