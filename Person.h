@@ -5,6 +5,8 @@
 #ifndef PERSON_H
 #define PERSON_H
 
+#include <string>
+
 class Person {
 	std::string preNominal, name, postNominal;
 	bool isMale;
