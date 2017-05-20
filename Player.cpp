@@ -23,7 +23,7 @@ Player::Player() {
 
 virtual int Person::die(){
 	//Death
-	cout << "You have died a the age of " << printAge() << endl;
+	cout << "You have died a the age of " << getAge() << endl;
 }
 
 Player::~Player() {

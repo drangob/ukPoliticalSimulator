@@ -43,7 +43,7 @@ virtual int Person::die(){
 	cout << getName() << "Has died at the age of " << getAge() << endl;
 }
 
-int Person::printAge(){
-	cout << "Age = " << this->age << endl;
+int Person::getAge(){
+	return age;
 }
 

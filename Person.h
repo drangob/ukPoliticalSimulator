@@ -17,7 +17,7 @@ public:
 	std::string getName();
 	int ageUp();
 	int die();
-	int printAge();
+	int getAge();
 };
 
 #endif

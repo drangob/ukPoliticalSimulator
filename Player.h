@@ -12,6 +12,7 @@ class Player: Person {
 public:
 	Player();
 	virtual ~Player();
+	int die();
 };
 
 #endif /* PLAYER_H_ */
