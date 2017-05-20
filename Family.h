@@ -8,7 +8,7 @@
 #ifndef FAMILY_H_
 #define FAMILY_H_
 
-class Family: Person {
+class Family{
 public:
 	Family();
 	virtual ~Family();

@@ -37,7 +37,7 @@ int Person::ageUp(){
 	return 0;
 }
 
-virtual int Person::die(){
+int Person::die(){
 	//die
 
 	cout << getName() << "Has died at the age of " << getAge() << endl;
