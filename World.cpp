@@ -12,7 +12,7 @@
 #include "Player.h"
 #include "Family.h"
 
-
+using namespace std;
 
 World::World(bool loadGame) {
 	//I'm using this syntax because I like it and I know you hate it!
@@ -32,13 +32,17 @@ double GetTime(){
 
 //Creates the new World
 void World::NewGame(){
-//TODO Generate the people and player
+	//TODO Generate the people and player
 	Time = 1985;
 }
 //Loads the game
 void World::LoadGame(){
 	//TODO Load the people, player and current time
 
+}
+void World::SaveGame(){
+	//TODO Implement save game
+	cout<<"SAVED!"<<endl;
 }
 
 //Advances time and ages population
@@ -48,6 +52,27 @@ void World::ClockTick(){
 }
 
 World::~World() {
+	//Check if player would like to save
+	cout << "Would you like to save your game?(y/n)" << endl;
+
+	//
+	bool stupidUser=true;
+	string userInput;
+
+	while (stupidUser){
+		cin >> userInput;
+
+		if(userInput=="y"){
+			SaveGame();
+			stupidUser=false;
+		}
+		else if(userInput=="n"){
+			stupidUser=false;
+		}
+		else{
+			cout<< "That was not a y or an n, try again"<< endl;
+		}
+	}
 
 }
 

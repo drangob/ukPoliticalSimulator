@@ -17,6 +17,7 @@ public:
 private:
 	void NewGame();
 	void LoadGame();
+	void SaveGame();
 	double Time;
 };
 
