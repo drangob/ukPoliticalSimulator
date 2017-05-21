@@ -6,7 +6,7 @@
 
 using namespace std;
 
-//main method for game running
+//main method for game running, processing in World, display done here
 int main(int argc, char const *argv[]) {
 	Person *me = new Person("Billy",2 , true, 100);
 	cout << me->getAge();
