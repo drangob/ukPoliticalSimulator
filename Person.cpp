@@ -37,13 +37,13 @@ int Person::ageUp(){
 	return 0;
 }
 
-int Person::die(){
+void Person::die(){
 	//die
-	this->printAge();
-	cout << "die!" << endl;
+
+	cout << getName() << "Has died at the age of " << getAge() << endl;
 }
 
-int Person::printAge(){
-	cout << "Age = " << this->age << endl;
+int Person::getAge(){
+	return age;
 }
 

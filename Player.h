@@ -8,10 +8,13 @@
 #ifndef PLAYER_H_
 #define PLAYER_H_
 
-class Player {
+#include "Person.h"
+
+class Player: Person {
 public:
 	Player();
 	virtual ~Player();
+	void die() override;
 };
 
 #endif /* PLAYER_H_ */

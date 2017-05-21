@@ -13,12 +13,10 @@
 
 using namespace std;
 
-Player::Player() {
-	// TODO Auto-generated constructor stub
-	Person newDude("Billy Bloggs",2,true,110);
-	cout<<newDude.getName()<<endl;
-	cout<<"test"<<endl;
 
+void Player::die(){
+	//Death
+	cout << "You have died a the age of " << getAge() << endl;
 }
 
 Player::~Player() {

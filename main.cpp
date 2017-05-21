@@ -2,12 +2,12 @@
 #include "Player.h"
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 
 //main method for game running
 int main(int argc, char const *argv[]) {
-	Player *jimmy = new Player();
-	Person *me = new Person("Billy", 2, true, 100);
-	return 0;
+	Person *me = new Person("Billy",2 , true, 100);
+	cout << me->getAge();
 }

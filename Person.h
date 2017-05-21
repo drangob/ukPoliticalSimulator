@@ -16,8 +16,8 @@ public:
 	Person(std::string name, double age, bool isMale, int maxAge);
 	std::string getName();
 	int ageUp();
-	int die();
-	int printAge();
+	virtual void die();
+	int getAge();
 };
 
 #endif
