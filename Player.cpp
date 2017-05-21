@@ -14,7 +14,7 @@
 using namespace std;
 
 
-int Player::die(){
+void Player::die(){
 	//Death
 	cout << "You have died a the age of " << getAge() << endl;
 }

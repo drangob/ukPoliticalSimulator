@@ -14,7 +14,7 @@ class Player: Person {
 public:
 	Player();
 	virtual ~Player();
-	int die() override;
+	void die() override;
 };
 
 #endif /* PLAYER_H_ */
