@@ -15,9 +15,12 @@
 using namespace std;
 
 World::World(bool loadGame) {
-	//I'm using this syntax because I like it and I know you hate it!
-	if(loadGame==true)LoadGame();
-	else NewGame();
+	//:)
+	if(loadGame) {
+		LoadGame();
+	} else {
+		NewGame();
+	}
 	// TODO Auto-generated constructor stub
 
 }
