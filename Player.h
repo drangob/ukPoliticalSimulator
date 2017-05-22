@@ -10,7 +10,7 @@
 
 #include "Person.h"
 
-class Player: Person {
+class Player: public Person {
 public:
 	using Person::Person;
 	virtual ~Player();
