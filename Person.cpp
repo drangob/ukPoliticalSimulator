@@ -7,7 +7,6 @@ using namespace std;
 
 
 Person::Person(std::string name, double age, bool isMale){
-	cout << "Object is being created " << endl;
 	this->name.assign(name);
 	this->isMale = isMale;
 	if (isMale){

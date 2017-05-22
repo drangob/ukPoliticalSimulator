@@ -7,6 +7,8 @@
 #include "World.h"
 #include <iostream>
 #include <string>
+#include <chrono>
+#include <thread>
 
 #include "Person.h"
 #include "Player.h"
@@ -75,10 +77,18 @@ void World::SaveGame(){
 	cout<<"SAVED!"<<endl;
 }
 
-//Advances time and ages population
-void World::ClockTick(){
+//Advances time and ages population, returns quitGame as true if the user chooses to quit.
+void World::ClockTick(bool *quitGame){
+	//Move clock forwards
 	Time+=0.25;
 
+	//Following code makes the system sleep for half a second
+    using namespace std::chrono_literals;
+    auto start = std::chrono::high_resolution_clock::now();
+    //Edit this line to adjust sleep time
+    std::this_thread::sleep_for(0.5s);
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double, std::milli> elapsed = end-start;
 }
 
 World::~World() {

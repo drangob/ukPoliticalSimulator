@@ -16,7 +16,7 @@ class World {
 public:
 	World(bool loadGame);
 	virtual ~World();
-	void ClockTick();
+	void ClockTick(bool *quitGame);
 	double GetTime();
 private:
 	void NewGame();
