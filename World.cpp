@@ -15,28 +15,55 @@
 using namespace std;
 
 World::World(bool loadGame) {
-	//:)
-	if(loadGame) {
-		LoadGame();
-	} else {
-		NewGame();
-	}
-	// TODO Auto-generated constructor stub
-
+	//Check if the game needs to be loaded or not
+	if(loadGame) LoadGame();
+	else NewGame();
 }
 
 //The current 1/4 year
 double Time;
 
+//Create the
+Player World::*player;
+
 //Returns the current time
-double GetTime(){
+double World::GetTime(){
 	return Time;
 }
 
 //Creates the new World
 void World::NewGame(){
-	//TODO Generate the people and player
+	//Set start date
 	Time = 1985;
+
+	//Set the name
+	cout << "What is your name?" << endl;
+	string name;
+	cin >> name;
+
+	//get gender
+	bool isMale;
+	bool stupidUser=true;
+	string userInput;
+	cout << "Are you a male?" << endl;
+	while (stupidUser){
+		cin >> userInput;
+		if(userInput=="y"){
+			stupidUser=false;
+			isMale=true;
+		}
+		else if(userInput=="n"){
+			stupidUser=false;
+			isMale=false;
+		}
+		else{
+			cout<< "That was not a 'y' or an 'n', try again"<< endl;
+		}
+
+	//Set up player object with given details
+	this->player = new Player(name,10,isMale);
+	}
+
 }
 //Loads the game
 void World::LoadGame(){
@@ -73,7 +100,7 @@ World::~World() {
 			stupidUser=false;
 		}
 		else{
-			cout<< "That was not a y or an n, try again"<< endl;
+			cout<< "That was not a 'y' or an 'n', try again"<< endl;
 		}
 	}
 

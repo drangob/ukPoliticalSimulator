@@ -8,6 +8,10 @@
 #ifndef WORLD_H_
 #define WORLD_H_
 
+#include "Person.h"
+#include "Player.h"
+#include "Family.h"
+
 class World {
 public:
 	World(bool loadGame);
@@ -18,6 +22,7 @@ private:
 	void NewGame();
 	void LoadGame();
 	void SaveGame();
+	Player *player;
 	double Time;
 };
 

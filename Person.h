@@ -13,7 +13,7 @@ class Person {
 	double age;
 	int maxAge;
 public:
-	Person(std::string name, double age, bool isMale, int maxAge);
+	Person(std::string name, double age, bool isMale);
 	std::string getName();
 	int ageUp();
 	virtual void die();
