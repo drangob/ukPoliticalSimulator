@@ -33,11 +33,20 @@ int main(int argc, char const *argv[]) {
 	}
 
 	World *world = new World(loadGame);
-
 	//Might as well keep using stupidUser
 	*stupidUser=true;
+
+	/*
 	while(*stupidUser){
 		world->ClockTick(stupidUser);
 	}
+	*/
+
+	//This is for testing only.
+	for(int x=0;x<=10;x++){
+		world->ClockTick(stupidUser);
+	}
+
+	//End game and save
 	delete world;
 }

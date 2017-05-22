@@ -81,6 +81,8 @@ void World::SaveGame(){
 void World::ClockTick(bool *quitGame){
 	//Move clock forwards
 	Time+=0.25;
+	//print current year
+	cout<<"Year: "<<this->GetTime()<<endl;
 
 	//Following code makes the system sleep for half a second
     using namespace std::chrono_literals;
@@ -89,6 +91,9 @@ void World::ClockTick(bool *quitGame){
     std::this_thread::sleep_for(0.5s);
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double, std::milli> elapsed = end-start;
+
+    //print player name and age
+    cout << player->getName() << " is " << player->getAge() << " years old";
 }
 
 World::~World() {
