@@ -6,7 +6,7 @@
 using namespace std;
 
 
-Person::Person(std::string name, double age, bool isMale, int maxAge){
+Person::Person(std::string name, double age, bool isMale){
 	cout << "Object is being created " << endl;
 	this->name.assign(name);
 	this->isMale = isMale;
@@ -16,7 +16,7 @@ Person::Person(std::string name, double age, bool isMale, int maxAge){
 		preNominal = "Miss";
 	}
 	this->age = age;
-	this->maxAge = maxAge;
+	this->maxAge = 105;
 }
 std::string Person::getName(){
 	return preNominal + " " + name + " " + postNominal;

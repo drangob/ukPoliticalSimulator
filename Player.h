@@ -12,7 +12,7 @@
 
 class Player: Person {
 public:
-	Player();
+	using Person::Person;
 	virtual ~Player();
 	void die() override;
 };
